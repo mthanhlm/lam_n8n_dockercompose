@@ -7,7 +7,7 @@ wget -O ngrok.tgz https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd
 sudo tar xvzf ./ngrok.tgz -C /usr/local/bin
 sudo apt install -y jq
 echo "🔴🔴🔴 Please login into ngrok.com and paste your token and static URL here:"
-export token="2sx36nSXbvo2J4gCU5rXwsYsvWW_3uuem4dszSAhrW2ZAkAPU"
+read -p "Token : " token
 export domain="wrongly-tolerant-humpback.ngrok-free.app"
 ngrok config add-authtoken $token
 ngrok http --url=$domain 5678 > /dev/null &
